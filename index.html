@@ -246,9 +246,41 @@
     </div>
   </section>
 
-  <!-- Neste seksjoner (Portefølje, Kunder, Kontakt, Footer)
+  <!-- ============ PORTEFØLJE ============ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="portfolio-head">
+        <div>
+          <p class="eyebrow" data-animate>Utvalgte prosjekter</p>
+          <h2 class="section-title" data-animate>Portefølje</h2>
+        </div>
+        <p class="portfolio-intro" data-animate>
+          Et utvalg av type oppdrag vi tar — fra bedriftsfilm til bilshow,
+          drifting og festival. Flere case-studies legges til fortløpende.
+        </p>
+      </div>
+
+      <!-- Filterknappene og prosjekt-grid fylles av js/main.js ut fra
+           innholdet i js/portfolio-data.js. Legg til nye prosjekter der. -->
+      <div class="portfolio-filters" id="portfolioFilters" data-animate></div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- Modal/detaljvisning for et enkelt porteføljeprosjekt -->
+  <dialog class="portfolio-modal" id="portfolioModal">
+    <button class="portfolio-modal__close" id="portfolioModalClose" aria-label="Lukk">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 5l14 14M19 5 5 19" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="portfolio-modal__body" id="portfolioModalBody"></div>
+  </dialog>
+
+  <!-- Neste seksjoner (Kunder, Kontakt, Footer)
        bygges videre i neste steg. -->
 
+  <script src="js/portfolio-data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

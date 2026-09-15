@@ -8,11 +8,18 @@ laste, enkel å hoste hvor som helst (GitHub Pages, Netlify, Vercel osv.).
 ## Struktur
 
 ```
-index.html        Alt markup, seksjon for seksjon
-css/style.css      Alle stiler (design-tokens øverst i filen)
-js/main.js         Nav, scroll-header, scroll-reveal-animasjoner
-images/placeholder Plassholder-mapper for bilder/video — se README der
+index.html            Alt markup, seksjon for seksjon
+css/style.css          Alle stiler (design-tokens øverst i filen)
+js/main.js             Nav, scroll-header, scroll-reveal, portefølje-rendering
+js/portfolio-data.js   Data for portefølje-seksjonen — legg nye prosjekter her
+images/placeholder     Plassholder-mapper for bilder/video — se README der
 ```
+
+### Legge til et nytt porteføljeprosjekt
+
+Åpne `js/portfolio-data.js` og legg til et nytt objekt i `HP_PORTFOLIO`-
+arrayet. Kort, filter og detaljvisning genereres automatisk — ingen behov
+for å røre HTML eller CSS. Se kommentarene øverst i filen for feltene.
 
 ## Utvikling
 
@@ -30,7 +37,7 @@ Bygges seksjon for seksjon:
 - [x] Prosjektstruktur + hero
 - [x] Om HP Media
 - [x] Tjenester
-- [ ] Portefølje / case-studies
+- [x] Portefølje / case-studies
 - [ ] Kunder / samarbeidspartnere
 - [ ] Kontakt
 - [ ] Footer
