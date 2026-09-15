@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>HP Media — Video, foto &amp; markedsføring for arrangementer og bedrifter</title>
+  <meta name="description" content="HP Media er et norsk video-, foto- og markedsføringsbyrå for arrangementer, bilshow, festivaler og bedriftskunder. Vi fanger action, energi og historier — se arbeidet vårt." />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HP Media" />
+  <meta property="og:title" content="HP Media — Video, foto &amp; markedsføring" />
+  <meta property="og:description" content="Video-, foto- og markedsføringsbyrå for arrangementer, bilshow, festivaler og bedriftskunder." />
+  <!-- TODO: erstatt med ekte delingsbilde (1200x630) når vi har det -->
+  <meta property="og:image" content="images/placeholder/og-cover.jpg" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HP Media — Video, foto &amp; markedsføring" />
+  <meta name="twitter:description" content="Video-, foto- og markedsføringsbyrå for arrangementer, bilshow, festivaler og bedriftskunder." />
+  <meta name="twitter:image" content="images/placeholder/og-cover.jpg" />
+
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">HP<span>MEDIA</span></a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">Om oss</a>
+        <a href="#services">Tjenester</a>
+        <a href="#portfolio">Portefølje</a>
+        <a href="#clients">Kunder</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-accent header-cta">Ta kontakt</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <!--
+      PLASSHOLDER: bakgrunnsvideo / showreel
+      Bytt ut poster-bildet under og legg inn en <video> her når ekte
+      showreel-opptak er klart, f.eks:
+
+      <video class="hero-video" autoplay muted loop playsinline
+             poster="images/placeholder/hero-poster.jpg">
+        <source src="videos/showreel.mp4" type="video/mp4" />
+      </video>
+
+      Frem til da bruker vi et animert gradient-lag + støy for å
+      signalisere bevegelse/energi uten en faktisk fil.
+    -->
+    <div class="hero-media" aria-hidden="true">
+      <div class="hero-media__gradient"></div>
+      <div class="hero-media__glow hero-media__glow--a"></div>
+      <div class="hero-media__glow hero-media__glow--b"></div>
+      <div class="hero-media__grid"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <p class="hero-eyebrow" data-animate>Video · Foto · Sosiale medier · Live-dekning</p>
+      <h1 class="hero-title" data-animate>
+        Vi fanger <span class="accent-text">farten</span>,<br />
+        lyden og øyeblikket.
+      </h1>
+      <p class="hero-subtitle" data-animate>
+        HP Media hjelper arrangører, bilshow, festivaler og bedrifter med å fortelle
+        historien sin — gjennom film, foto og innhold som treffer.
+      </p>
+
+      <div class="hero-actions" data-animate>
+        <a href="#portfolio" class="btn btn-accent btn-lg">
+          Se arbeidet vårt
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          Ta kontakt
+        </a>
+      </div>
+
+      <div class="hero-stats" data-animate>
+        <div class="hero-stat">
+          <span class="hero-stat__num">100+</span>
+          <span class="hero-stat__label">Prosjekter levert</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">30+</span>
+          <span class="hero-stat__label">Arrangementer dekket</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">10+</span>
+          <span class="hero-stat__label">Bedriftskunder</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Scroll ned">
+      <span class="hero-scroll__dot"></span>
+    </a>
+  </section>
+
+  <!-- Neste seksjoner (Om oss, Tjenester, Portefølje, Kunder, Kontakt, Footer)
+       bygges videre i neste steg. -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
