@@ -205,4 +205,32 @@
     renderFilters();
     renderGrid();
   }
+
+  /* ------------------------------------------------------------------ */
+  /* Contact form                                                        */
+  /*                                                                      */
+  /* PLASSHOLDER: dette skjemaet sender ikke noe sted ennå — det viser    */
+  /* bare en bekreftelse lokalt. Koble til et ekte mottak (skjema-        */
+  /* endepunkt eller backend) når det er klart, f.eks. ved å sette        */
+  /* skjemaets action/fetch-URL her og fjerne early-return-simuleringen.  */
+  /* ------------------------------------------------------------------ */
+  var contactForm = document.getElementById('contactForm');
+  var contactStatus = document.getElementById('contactFormStatus');
+  if (contactForm && contactStatus) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+      contactStatus.textContent = 'Takk! Meldingen er registrert — vi svarer så snart vi kan.';
+      contactForm.reset();
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Footer year                                                         */
+  /* ------------------------------------------------------------------ */
+  var yearEl = document.getElementById('footerYear');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();

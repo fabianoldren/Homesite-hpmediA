@@ -277,8 +277,144 @@
     <div class="portfolio-modal__body" id="portfolioModalBody"></div>
   </dialog>
 
-  <!-- Neste seksjoner (Kunder, Kontakt, Footer)
-       bygges videre i neste steg. -->
+  <!-- ============ KUNDER / SAMARBEIDSPARTNERE ============ -->
+  <section class="clients section" id="clients">
+    <div class="container">
+      <p class="eyebrow" data-animate>Tillit fra bransjen</p>
+      <h2 class="section-title" data-animate>Kunder &amp; samarbeidspartnere</h2>
+      <p class="clients-intro" data-animate>
+        Vi har levert video, foto og innhold for et bredt spekter av oppdragsgivere —
+        blant annet bedriftskunder, motorsport- og bilshow-arrangører og festivaler.
+      </p>
+
+      <!--
+        PLASSHOLDER: bytt ut kunde-plassene under med ekte logoer etter hvert
+        som vi får tillatelse til å vise dem, f.eks:
+        <li class="client-tile"><img src="images/clients/kunde-1.svg" alt="Kundenavn" /></li>
+      -->
+      <ul class="client-grid" data-animate>
+        <li class="client-tile"><span>Bedriftskunde</span></li>
+        <li class="client-tile"><span>Bilshow-arrangør</span></li>
+        <li class="client-tile"><span>Motorsportmiljø</span></li>
+        <li class="client-tile"><span>Festivalarrangør</span></li>
+        <li class="client-tile"><span>Bedriftskunde</span></li>
+        <li class="client-tile"><span>Bilklubb</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="contact section" id="contact">
+    <div class="container contact-grid">
+
+      <div class="contact-copy">
+        <p class="eyebrow" data-animate>La oss lage noe sammen</p>
+        <h2 class="section-title" data-animate>Ta kontakt</h2>
+        <p class="contact-lead" data-animate>
+          Fortell oss kort om prosjektet — arrangement, bilshow, bedriftsoppdrag
+          eller noe annet — så svarer vi med hva vi kan tilby.
+        </p>
+
+        <ul class="contact-info" data-animate>
+          <li>
+            <span class="contact-info__label">E-post</span>
+            <!-- TODO: bytt til ekte e-postadresse -->
+            <a href="mailto:post@hpmedia.no">post@hpmedia.no</a>
+          </li>
+          <li>
+            <span class="contact-info__label">Telefon</span>
+            <!-- TODO: bytt til ekte telefonnummer -->
+            <a href="tel:+4790000000">+47 900 00 000</a>
+          </li>
+          <li>
+            <span class="contact-info__label">Område</span>
+            <span>Tilgjengelig for oppdrag i hele Norge</span>
+          </li>
+        </ul>
+
+        <div class="contact-social" data-animate>
+          <!-- TODO: bytt ut med ekte profil-lenker -->
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3v10.6a3.6 3.6 0 1 1-3-3.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 3c.4 2.4 2.1 4.2 4.5 4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10.5 9.5 5 2.5-5 2.5v-5Z" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" data-animate novalidate>
+        <!--
+          PLASSHOLDER: skjemaet viser en bekreftelse lokalt (js/main.js) uten
+          å sende noe sted ennå. Koble til et ekte mottak når klart, f.eks.
+          et skjema-endepunkt (Formspree e.l.) i action-attributtet, eller
+          en backend-rute.
+        -->
+        <div class="form-row">
+          <label for="cf-name">Navn</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-row">
+          <label for="cf-email">E-post</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" />
+        </div>
+        <div class="form-row">
+          <label for="cf-type">Type prosjekt</label>
+          <select id="cf-type" name="project_type" required>
+            <option value="" disabled selected>Velg type prosjekt</option>
+            <option value="bedrift">Bedriftsoppdrag</option>
+            <option value="bilshow">Bilshow / motorsport</option>
+            <option value="festival">Festival / arrangement</option>
+            <option value="sosiale-medier">Sosiale medier</option>
+            <option value="annet">Annet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Melding</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-lg contact-submit">Send henvendelse</button>
+        <p class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="logo">HP<span>MEDIA</span></a>
+
+      <nav class="footer-nav">
+        <a href="#about">Om oss</a>
+        <a href="#services">Tjenester</a>
+        <a href="#portfolio">Portefølje</a>
+        <a href="#clients">Kunder</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <div class="footer-social">
+        <!-- TODO: bytt ut med ekte profil-lenker (samme som i kontaktseksjonen) -->
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3v10.6a3.6 3.6 0 1 1-3-3.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 3c.4 2.4 2.1 4.2 4.5 4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10.5 9.5 5 2.5-5 2.5v-5Z" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="footerYear">2026</span> HP Media. Alle rettigheter reservert.</p>
+    </div>
+  </footer>
 
   <script src="js/portfolio-data.js"></script>
   <script src="js/main.js"></script>

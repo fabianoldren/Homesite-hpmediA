@@ -38,6 +38,11 @@ Bygges seksjon for seksjon:
 - [x] Om HP Media
 - [x] Tjenester
 - [x] Portefølje / case-studies
-- [ ] Kunder / samarbeidspartnere
-- [ ] Kontakt
-- [ ] Footer
+- [x] Kunder / samarbeidspartnere
+- [x] Kontakt
+- [x] Footer
+
+Alle seksjoner fra oppdraget er på plass. Gjenstående arbeid er å bytte
+plassholder-innhold (bilder, video, klientlogoer, kontaktinfo, sosiale
+lenker) med ekte materiale — se `TODO`-kommentarer i `index.html`,
+`js/main.js` og `js/portfolio-data.js`.
