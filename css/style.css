@@ -535,6 +535,72 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
+   Services
+   ========================================================================== */
+.services { background: var(--bg-alt); }
+
+.services-head { max-width: 640px; }
+.services-intro {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 50ch;
+}
+
+.services-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.service-card {
+  background: var(--bg-alt);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: background 0.3s var(--ease);
+}
+.service-card:hover { background: var(--bg-elevated); }
+
+.service-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-2);
+  background: rgba(47, 107, 255, 0.12);
+  transition: color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.service-card:hover .service-card__icon {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  transform: translateY(-3px);
+}
+
+.service-card__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+}
+
+.service-card__text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 900px) {
@@ -560,6 +626,8 @@ h1, h2, h3, h4 {
   .about-grid { grid-template-columns: 1fr; gap: 56px; }
   .about-visual { max-width: 420px; }
   .about-card { left: 0; bottom: -24px; }
+
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 520px) {
@@ -569,4 +637,6 @@ h1, h2, h3, h4 {
   .section { padding-block: 88px; }
   .about-list { grid-template-columns: 1fr; }
   .about-card { position: static; margin-top: 20px; max-width: none; }
+
+  .services-grid { grid-template-columns: 1fr; }
 }

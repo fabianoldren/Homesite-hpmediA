@@ -29,7 +29,7 @@ Bygges seksjon for seksjon:
 
 - [x] Prosjektstruktur + hero
 - [x] Om HP Media
-- [ ] Tjenester
+- [x] Tjenester
 - [ ] Portefølje / case-studies
 - [ ] Kunder / samarbeidspartnere
 - [ ] Kontakt
