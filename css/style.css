@@ -11,8 +11,8 @@
   --text-muted: #9d9da6;
   --text-faint: #6b6b74;
 
-  --accent: #ff3d24;       /* racing red/orange — primary accent */
-  --accent-2: #ff8a1f;     /* orange, used in gradients */
+  --accent: #2f6bff;       /* electric blue — primary accent */
+  --accent-2: #00c2ff;     /* cyan-blue, used in gradients */
   --accent-contrast: #0a0a0c;
 
   --radius: 14px;
@@ -91,9 +91,9 @@ h1, h2, h3, h4 {
 .btn-accent {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   color: #fff;
-  box-shadow: 0 8px 24px -8px rgba(255, 61, 36, 0.6);
+  box-shadow: 0 8px 24px -8px rgba(47, 107, 255, 0.6);
 }
-.btn-accent:hover { box-shadow: 0 12px 32px -8px rgba(255, 61, 36, 0.75); }
+.btn-accent:hover { box-shadow: 0 12px 32px -8px rgba(47, 107, 255, 0.75); }
 
 .btn-outline {
   background: transparent;
@@ -225,8 +225,8 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(255, 61, 36, 0.22), transparent 60%),
-    radial-gradient(ellipse 70% 60% at 85% 30%, rgba(255, 138, 31, 0.16), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(47, 107, 255, 0.24), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 85% 30%, rgba(0, 194, 255, 0.18), transparent 60%),
     linear-gradient(180deg, #0d0d10 0%, #0a0a0c 55%, #0a0a0c 100%);
 }
 
@@ -387,6 +387,154 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
+   Shared section utilities
+   ========================================================================== */
+.section { padding-block: 120px; }
+
+.eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
+  max-width: 18ch;
+  text-wrap: balance;
+  color: var(--text);
+}
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.about-lead {
+  margin-top: 24px;
+  font-size: 1.15rem;
+  color: var(--text);
+  max-width: 52ch;
+}
+
+.about-body {
+  margin-top: 18px;
+  color: var(--text-muted);
+  max-width: 54ch;
+}
+
+.about-list {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+}
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.about-list__mark {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.about-visual { position: relative; }
+
+.about-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 90% 70% at 30% 20%, rgba(47, 107, 255, 0.28), transparent 60%),
+    radial-gradient(ellipse 80% 70% at 80% 90%, rgba(0, 194, 255, 0.2), transparent 60%),
+    var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+.about-frame__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.about-frame__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(245, 245, 247, 0.08);
+  border: 1px solid rgba(245, 245, 247, 0.25);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+.about-frame:hover .about-frame__play {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+}
+.about-frame__label {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.about-card {
+  position: absolute;
+  left: -28px;
+  bottom: -28px;
+  max-width: 240px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 20px 40px -16px rgba(0, 0, 0, 0.6);
+}
+.about-card__num {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.about-card__text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 900px) {
@@ -408,9 +556,17 @@ h1, h2, h3, h4 {
   .main-nav.is-open a { width: 100%; padding: 12px 0; font-size: 1rem; }
 
   .hero-stats { gap: 28px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 56px; }
+  .about-visual { max-width: 420px; }
+  .about-card { left: 0; bottom: -24px; }
 }
 
 @media (max-width: 520px) {
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-stats { flex-direction: column; gap: 18px; }
+
+  .section { padding-block: 88px; }
+  .about-list { grid-template-columns: 1fr; }
+  .about-card { position: static; margin-top: 20px; max-width: none; }
 }

@@ -28,7 +28,7 @@ python3 -m http.server 8000
 Bygges seksjon for seksjon:
 
 - [x] Prosjektstruktur + hero
-- [ ] Om HP Media
+- [x] Om HP Media
 - [ ] Tjenester
 - [ ] Portefølje / case-studies
 - [ ] Kunder / samarbeidspartnere
