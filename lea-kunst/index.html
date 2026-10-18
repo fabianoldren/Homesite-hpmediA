@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier Lea — Kunst &amp; maleri</title>
+  <meta name="description" content="Atelier Lea: originale malerier med tekstur — fjell, lys og abstrakte landskap. Se galleriet og ta kontakt for kjøp eller bestillingsverk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Atelier Lea — til toppen">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">Atelier Lea</span>
+    </a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <span></span><span></span><span class="sr-only">Meny</span>
+      </button>
+      <ul id="nav-list">
+        <li><a href="#samlingen">Samlingen</a></li>
+        <li><a href="#galleri">Galleri</a></li>
+        <li><a href="#om">Om Lea</a></li>
+        <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Kunst &amp; maleri</p>
+        <h1 class="hero-title">
+          <span class="line"><span>Fjell, lys</span></span>
+          <span class="line"><span>og <em>tekstur</em></span></span>
+          <span class="line"><span>du kan kjenne.</span></span>
+        </h1>
+        <p class="hero-lead reveal">Lea maler originale verk i akryl og strukturpasta — fra solnedgang over tinder til abstrakte flater av rust og mose.</p>
+        <div class="hero-actions reveal">
+          <a href="#galleri" class="btn btn-primary">Se maleriene</a>
+          <a href="#kontakt" class="btn btn-ghost">Kjøp eller bestill</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <div class="stack" id="stack">
+          <figure class="canvas3d c1"><img src="img/rod-tinde.jpg" alt=""></figure>
+          <figure class="canvas3d c2"><img src="img/fjelltopper-i-solnedgang.jpg" alt=""></figure>
+          <figure class="canvas3d c3"><img src="img/hvit-stillhet.jpg" alt=""></figure>
+        </div>
+      </div>
+
+      <a href="#samlingen" class="scroll-hint" aria-label="Rull ned">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Originale malerier</span><i>✦</i><span>Strukturpasta</span><i>✦</i><span>Akryl på lerret</span><i>✦</i><span>Bestillingsverk</span><i>✦</i>
+        <span>Originale malerier</span><i>✦</i><span>Strukturpasta</span><i>✦</i><span>Akryl på lerret</span><i>✦</i><span>Bestillingsverk</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ===== 3D ring ===== -->
+    <section class="section ring-section" id="samlingen">
+      <div class="section-head">
+        <p class="eyebrow reveal">Samlingen</p>
+        <h2 class="reveal">Gå en runde i atelieret</h2>
+        <p class="section-lead reveal">Dra, sveip eller bruk piltastene for å snu karusellen.</p>
+      </div>
+      <div class="ring-viewport" id="ring-viewport" tabindex="0" aria-label="3D-karusell med malerier. Bruk piltastene for å rotere.">
+        <div class="ring" id="ring"></div>
+      </div>
+      <p class="ring-caption" id="ring-caption" aria-live="polite"></p>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="section" id="galleri">
+      <div class="section-head">
+        <p class="eyebrow reveal">Galleri</p>
+        <h2 class="reveal">Utvalgte verk</h2>
+        <p class="section-lead reveal">Klikk på et maleri for å se det større.</p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section about" id="om">
+      <div class="about-media reveal">
+        <div class="tilt" data-tilt>
+          <img src="img/rust-og-mose.jpg" alt="Abstrakt maleri i oransje, brunt og grønt med grov tekstur" loading="lazy">
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow reveal">Om Lea</p>
+        <!-- TODO: Bytt ut med Leas egen tekst -->
+        <h2 class="reveal">Malerier bygget i lag</h2>
+        <p class="reveal">Lea jobber med lerretet som et landskap: tykke lag strukturpasta blir til fjellrygger, skrenter og snø, før fargen legges på i tynne, levende strøk. Resultatet er bilder som endrer seg med lyset i rommet.</p>
+        <p class="reveal">Motivene henter hun fra fjellet og naturen — men like ofte fra følelsen av et sted, mer enn hvordan det faktisk ser ut.</p>
+        <ul class="process">
+          <li class="reveal"><span>01</span><div><h3>Struktur</h3><p>Pasta og palettkniv former relieffet.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Farge</h3><p>Akryl i lag — fra varm solnedgang til dyp mose.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Lys</h3><p>Teksturen fanger lyset og gir bildet dybde.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="kontakt">
+      <div class="contact-card reveal">
+        <div class="contact-info">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Interessert i et maleri?</h2>
+          <p>Ta kontakt for kjøp, visning eller et bestillingsverk i ditt format og dine farger. Nettbutikk kommer snart.</p>
+          <!-- TODO: Bytt ut med Leas ekte kontaktinfo -->
+          <ul class="contact-list">
+            <li><span>E-post</span><a href="mailto:hei@atelierlea.no">hei@atelierlea.no</a></li>
+            <li><span>Telefon</span><a href="tel:+4700000000">+47 000 00 000</a></li>
+            <li><span>Instagram</span><a href="https://instagram.com/" target="_blank" rel="noopener">@atelierlea</a></li>
+            <li><span>Atelier</span><p>Norge — visning etter avtale</p></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>Navn<input name="navn" type="text" required autocomplete="name"></label>
+          <label>E-post<input name="epost" type="email" required autocomplete="email"></label>
+          <label>Hva gjelder det?
+            <select name="emne">
+              <option>Kjøp av maleri</option>
+              <option>Bestillingsverk</option>
+              <option>Visning i atelieret</option>
+              <option>Annet</option>
+            </select>
+          </label>
+          <label>Melding<textarea name="melding" rows="4" required></textarea></label>
+          <button class="btn btn-primary" type="submit">Send melding</button>
+          <p class="form-note">Skjemaet åpner e-postprogrammet ditt.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-big">Atelier Lea</p>
+    <div class="footer-row">
+      <p>© <span id="year"></span> Atelier Lea. Alle verk er originaler.</p>
+      <a href="#top">Til toppen ↑</a>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Maleri i stor visning" hidden>
+    <button class="lb-close" aria-label="Lukk">×</button>
+    <button class="lb-nav lb-prev" aria-label="Forrige">‹</button>
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" aria-label="Neste">›</button>
+  </div>
+
+  <script src="js/works.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
